@@ -18,6 +18,7 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 
+from registration.urls import urlpatterns
 from pages.urls import pages_patterns
 
 urlpatterns = [
@@ -27,6 +28,9 @@ urlpatterns = [
     path('pages/', include(pages_patterns)),
     # Path del admin
     path('admin/', admin.site.urls),
+    # Path Auth
+    path("accounts/", include("django.contrib.auth.urls")),
+    path("accounts/", include("registration.urls")),
 ]
 
 if settings.DEBUG:
