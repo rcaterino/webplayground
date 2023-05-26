@@ -29,7 +29,7 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'pages:pages' %}">Páginas</a>
-              </li>
+              </li>    
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'profiles:list' %}">Perfiles</a>
               </li>
@@ -37,12 +37,15 @@
             <ul class="navbar-nav">
               {% if not request.user.is_authenticated %}
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'login' %}">Accede</a>
+                  <a class="nav-link" href="{% url 'login' %}">Acceder</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'signup' %}">Regístrate</a>
-                </li>
+                    <a class="nav-link" href="{% url 'signup' %}">Registro</a>
+                  </li>
               {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'messenger:list' %}">Mensajes</a>
+              </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'profile' %}">Perfil</a>
                 </li>
