@@ -1,0 +1,28 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "===4.2"
+django-ckeditor = "==6.5.1"
+pillow = "==9.5.0"
+pylint = "==2.17.4"
+pylint-django = "==2.5.3"
+pylint-celery = "==0.3"
+channels = "==4.0.0"
+redis = "==4.5.5"
+channels-redis = "==4.1.0"
+whitenoise = "==6.4.0"
+psycopg2 = "==2.9.6"
+gunicorn = "==20.1.0"
+
+[dev-packages]
+pycodestyle = "==2.10.0"
+autopep8 = "==2.0.2"
+
+[requires]
+python_version = "3.11"
+
+[scripts]
+webpersonal = 'python webpersonal/manage.py runserver'
