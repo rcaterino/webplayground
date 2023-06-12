@@ -54,10 +54,8 @@ pipenv install --ignore-pipfile
 
 ```
 DEBUG=True
-SECRET_KEY=CLAVE SECRETA
-DATABASE_URL=sqlite:///db.sqlite3
 SECRET_KEY=mi_clave_secreta
-DEBUG=True
+DATABASE_URL=sqlite:///db.sqlite3
 EMAIL_HOST=mi_servidor_smtp
 EMAIL_PORT=mi_puerto_smtp
 EMAIL_HOST_USER=mi_usuario_smtp
