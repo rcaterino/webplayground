@@ -53,6 +53,9 @@ pipenv install --ignore-pipfile
 6. ⚙️ Antes de ejecutar el proyecto, asegúrate de configurar las variables de entorno adecuadas. Crea un archivo `.env` en el directorio raíz del proyecto y define las siguientes variables:
 
 ```
+DEBUG=True
+SECRET_KEY=CLAVE SECRETA
+DATABASE_URL=sqlite:///db.sqlite3
 SECRET_KEY=mi_clave_secreta
 DEBUG=True
 EMAIL_HOST=mi_servidor_smtp
