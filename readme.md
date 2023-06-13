@@ -18,7 +18,7 @@ A lo largo del proyecto Web Playground, podrás disfrutar de las siguientes cara
 
 - 📨 **Restauración de contraseña por correo electrónico:** ¿Olvidaste tu contraseña? ¡No te preocupes! Te enviaremos instrucciones mágicas por correo electrónico para restaurarla. 📧✨
 
-- 🚀 **Aplicaciones adicionales para explorar:** ¡No te conformes solo con las funcionalidades básicas! Explora nuestras aplicaciones adicionales para perfiles públicos y mensajería privada. ¡La diversión nunca termina!
+- 💬 **Mensajería privada en tiempo real:** Comunícate con tus amigos en tiempo real utilizando nuestro sistema de mensajería privada. Utilizamos Channels y WebSockets para una experiencia de comunicación instantánea. ⚡🗨️
 
 ## Instrucciones para la ejecución 🛠️
 
@@ -64,14 +64,15 @@ EMAIL_HOST_PASSWORD=mi_contraseña_smtp
 
 ¡No olvides reemplazar los valores mágicos con los tuyos propios!
 
+7. 🧙 Antes de ejecutar la aplicación, asegúrate de tener Redis instalado y en ejecución en tu máquina. Redis es necesario para que la comunicación por WebSockets funcione correctamente.
 
-7. 🧙 Realiza las migraciones de la base de datos para crear las tablas necesarias:
+8. 🌟 Realiza las migraciones de la base de datos para crear las tablas necesarias:
 
 ```
 python manage.py migrate
 ```
 
-8. 🌟 Crea un superusuario para acceder al panel de administración mágico:
+9. 🌈 Crea un superusuario para acceder al panel de administración mágico:
 
 ```
 python manage.py createsuperuser
@@ -79,7 +80,7 @@ python manage.py createsuperuser
 
 Sigue las indicaciones para proporcionar un nombre de usuario, correo electrónico y contraseña para el superusuario.
 
-9. 🚀 ¡Hora de encender los motores! Inicia el servidor de desarrollo:
+10. 🚀 ¡Hora de encender los motores! Inicia el servidor de desarrollo:
 
 ```
 python manage.py runserver
@@ -89,15 +90,15 @@ La aplicación Web Playground estará disponible en `http://localhost:8000/`. Po
 
 **Nota:** Asegúrate de que los puertos necesarios estén disponibles y no estén bloqueados por firewalls u otros servicios en tu máquina.
 
-10. 👀 Una vez que el servidor de desarrollo esté en marcha, abre tu navegador web y visita `http://localhost:8000` para acceder a la página principal de Web Playground.
+11. 👀 Una vez que el servidor de desarrollo esté en marcha, abre tu navegador web y visita `http://localhost:8000` para acceder a la página principal de Web Playground.
 
-11. 🎉 ¡Explora y diviértete! Podrás experimentar con todas las increíbles funcionalidades y conceptos que ofrece el proyecto. Sigue las instrucciones y consulta la documentación para comprender cómo utilizar cada característica.
+12. 🎉 ¡Explora y diviértete! Podrás experimentar con todas las increíbles funcionalidades y conceptos que ofrece el proyecto. Sigue las instrucciones y consulta la documentación para comprender cómo utilizar cada característica.
 
-12. 🤝 Si deseas probar la funcionalidad de autenticación de usuarios, puedes registrarte como un nuevo usuario haciendo clic en el enlace "Registrarse" en la esquina superior derecha de la página. Completa el formulario de registro con la información requerida y haz clic en "Registrarse". Después de registrarte, podrás iniciar sesión utilizando tus credenciales.
+13. 🤝 Si deseas probar la funcionalidad de autenticación de usuarios, puedes registrarte como un nuevo usuario haciendo clic en el enlace "Registrarse" en la esquina superior derecha de la página. Completa el formulario de registro con la información requerida y haz clic en "Registrarse". Después de registrarte, podrás iniciar sesión utilizando tus credenciales.
 
-13. ⚡ Además, puedes acceder al panel de administración de Django en `http://localhost:8000/admin/` utilizando las credenciales del superusuario que creaste en el paso 8. Desde el panel de administración, podrás gestionar los modelos de la aplicación y realizar tareas administrativas.
+14. ⚡ Además, puedes acceder al panel de administración de Django en `http://localhost:8000/admin/` utilizando las credenciales del superusuario que creaste en el paso 9. Desde el panel de administración, podrás gestionar los modelos de la aplicación y realizar tareas administrativas.
 
-14. 🌈 Si deseas explorar y utilizar alguna de las aplicaciones individuales desarrolladas como parte del proyecto (por ejemplo, la aplicación de perfiles públicos o la aplicación de mensajería privada), podrás acceder a ellas siguiendo las URLs proporcionadas en la documentación del proyecto.
+15. 🌈 Si deseas explorar y utilizar alguna de las aplicaciones individuales desarrolladas como parte del proyecto (por ejemplo, la aplicación de perfiles públicos o la aplicación de mensajería privada), podrás acceder a ellas siguiendo las URLs proporcionadas en la documentación del proyecto.
 
 ¡Disfruta explorando y aprendiendo con Web Playground! Si tienes alguna pregunta o encuentras algún problema, consulta la documentación o visita el repositorio en GitHub para obtener más información.
 
