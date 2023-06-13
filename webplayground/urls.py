@@ -23,7 +23,6 @@ from pages.urls import pages_patterns
 from profiles.urls import profiles_patterns
 from registration.urls import urlpatterns
 
-
 urlpatterns = [
     # Paths del core
     path('', include('core.urls')),
