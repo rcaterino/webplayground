@@ -4,10 +4,11 @@ from django.db.models.signals import m2m_changed
 
 # Create your models here.
 class Message(models.Model):
+        
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     content = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
-
+    is_read = models.BooleanField(default=False)  # Nuevo campo agregado
     class Meta:
         ordering = ['created']
 
@@ -27,8 +28,14 @@ class ThreadManager(models.Manager):
         
 
 class Thread(models.Model):
+    STATUS_CHOICES = (
+        ('N', 'No Leído'),
+        ('L', 'Leído'),
+    )
+    
     users = models.ManyToManyField(User, related_name='threads')
     messages = models.ManyToManyField(Message)
+    status = models.CharField(max_length=1, choices=STATUS_CHOICES, default='N')
     updated = models.DateTimeField(auto_now=True)
 
     objects = ThreadManager()
@@ -41,7 +48,7 @@ def messages_changed(sender, **kwargs):
     instance = kwargs.pop("instance", None)
     action = kwargs.pop("action", None)
     pk_set = kwargs.pop("pk_set", None)
-    print(instance, action, pk_set)
+    #print(instance, action, pk_set)
 
     false_pk_set = set()
     if action == "pre_add":
