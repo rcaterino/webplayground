@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "4.2.2"
+pillow = "6.2.0"
+django-ckeditor = "9.0.1"
+environs = "*"
+channels = "*"
+redis = "*"
+channels-redis = "*"
+daphne = "*"
+asgiref = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
+
+[scripts]
+server = "python manage.py runserver"
+migrations = "python manage.py makemigrations" 
+migrate = "python manage.py migrate" 
+superuser = "python manage.py createsuperuser"

@@ -35,9 +35,6 @@ ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 # Application definition
 INSTALLED_APPS = [
-    'channels',
-    'channels_redis',
-    'daphne',
     'registration',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -81,18 +78,6 @@ TEMPLATES = [
         },
     },
 ]
-
-# Configuración de Channels
-ASGI_APPLICATION = 'webplayground.asgi.application'
-
-CHANNEL_LAYERS = {
-    "default": {
-        "BACKEND": "channels_redis.core.RedisChannelLayer",
-        "CONFIG": {
-            "hosts": [("127.0.0.1", 6379)],
-        },
-    },
-}
 
 WSGI_APPLICATION = 'webplayground.wsgi.application'
 
